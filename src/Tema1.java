@@ -21,7 +21,7 @@ public class Tema1 {
         }
 
     static int mediaA3Parametri(int x, int y, int z) {
-        return (x + y + z) / 2;
+        return (x + y + z) / 3;
     }
 
     static void numereCuprinse(int start, int end) {
@@ -43,7 +43,7 @@ public class Tema1 {
 
         System.out.println("Studentul are" + " " + varsta + " " + "ani");
         System.out.println("Studentul are" + " " + inaltime + " " + "metri");
-        if (prezentLaCurs = true) {
+        if (prezentLaCurs) {
             System.out.println("Studentul este prezent la curs");
         }else {
             System.out.println("Studentul nu este prezent la curs");
@@ -58,7 +58,7 @@ public class Tema1 {
 
         System.out.println("Suma celor doua valori int este: " + (numar1 + numar2));
 
-        System.out.println("Media numerelor este: " + ((numar1 + numar2 + numar3) / 2));
+        System.out.println("Media numerelor este: " + ((numar1 + numar2 + numar3) / 3));
 
         // exercitiul 3
 
