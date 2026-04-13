@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -21,6 +22,7 @@ public class Tema4 {
         driver.get("https://practicesoftwaretesting.com/");
         driver.manage().window().maximize();
     }
+
 
     // Exercitiul 1
 //    Creează un test care:
@@ -105,12 +107,10 @@ public class Tema4 {
         //WebElement filter = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='checkbox']/following-sibling::div/following-sibling::div/child::label/child::input")));
 
 
-        WebElement filteredProducts = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-test='filter_completed']")));
+        //WebElement filteredProducts = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-test='filter_completed']")));
 
-
-
-
-
+        WebElement filteredProducts = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h5[text()=' Adjustable Wrench ']")));
+        Assert.assertTrue(filteredProducts.getText().contains("Wrench"));
 
     }
 
