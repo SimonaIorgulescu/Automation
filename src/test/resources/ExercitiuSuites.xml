@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Demo Suite">
+    <test name="Suites Tests">
+        <groups>
+            <run>
+                <include name="regression"/>
+                <exclude name="slow"/>
+                
+            </run>
+            
+        </groups>
+        
+        <classes>
+            <class name="ExercitiuSuites.LoginTests"/>
+            <class name="ExercitiuSuites.ProfileTests"/>
+            <class name="ExercitiuSuites.SearchTests"/>
+
+            
+        </classes>
+        
+    </test>
+    
+    
+</suite>

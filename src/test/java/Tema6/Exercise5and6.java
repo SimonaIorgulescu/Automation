@@ -1,8 +1,9 @@
+package Tema6;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -11,36 +12,37 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-import java.util.List;
 
-public class Tema5 {
+public class Exercise5and6 {
+
+    // am pus niste teste din temele mai vechi si am adaugat pentru ele Groups si Priorities
+
+    // Exercitiul 5
+//    Creaza cateva teste simple (la alegere, cu body complet si Assert), seteaza prioritati incepand de la -1
+    // Exercitiul 6
+    //Creaza cateva teste simple (la alegere, cu body complet si Assert), seteaza groups si ruleaza-le dintr-un fisier .xml
+
 
     WebDriver driver;
 
 
-    @BeforeMethod
-    public void setUP(){
+    @BeforeMethod(alwaysRun = true)
+    public void setUP() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown(){
         driver.quit();
     }
 
-    // Exercitiul 1
-//   a. Accesează o categorie de produse.
-//   b. Folosește filtrele disponibile.
-//   c. Selectează un filtru (ex: brand).
-//   d. Verifică faptul că cel puțin două produse conțin numele categoriei selectate.
-
-    @Test
+    @Test(groups = {"smoke"},priority = -1)
     public void exercise1(){
 
         driver.get("https://practicesoftwaretesting.com/");
 
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
         WebElement filter = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[contains(., 'Sander')]/child::input")));
         filter.click();
@@ -55,16 +57,7 @@ public class Tema5 {
         Assert.assertTrue(productTitle2,"Product is filtered incorrectly");
     }
 
-
-    // Exercitiul 2
-//   a. Deschide un produs.
-//   b. Apasă Add to cart.
-//   c. Deschide coșul.
-//   d. Verificare:
-//      I. produsul apare în coș
-//     II. cantitatea este 1
-
-    @Test
+    @Test(groups = {"smoke","regression"},priority = 0)
     public void exercise2(){
 
         driver.get("https://practicesoftwaretesting.com/");
@@ -94,18 +87,7 @@ public class Tema5 {
 
     }
 
-    // Exercitiul 3 - Test case
-//    a. Accesează site-ul.
-//    b. Caută produsul Hammer.
-//    c. Deschide produsul.
-//    d. Adaugă produsul în coș.
-//    e. Deschide coșul.
-//    f. Verifică:
-//       I. produsul este în coș
-//       II. cantitatea este 1
-//       III. prețul este afișat.
-
-    @Test
+    @Test(groups = {"smoke","regression"},priority = 1)
     public void testCase() {
 
         driver.get("https://practicesoftwaretesting.com/");
@@ -144,5 +126,6 @@ public class Tema5 {
         Assert.assertTrue(totalPrice.isDisplayed());
 
     }
-
 }
+
+
