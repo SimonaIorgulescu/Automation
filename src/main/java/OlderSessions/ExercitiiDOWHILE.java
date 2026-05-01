@@ -1,3 +1,5 @@
+package OlderSessions;
+
 public class ExercitiiDOWHILE {
 
     public static void main(String[] args) {

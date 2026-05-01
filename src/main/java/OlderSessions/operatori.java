@@ -1,8 +1,10 @@
+package OlderSessions;
+
 public class operatori {
 
     public static void main(String[] args) {
 
-        //operatori matematici
+        //OlderSessions.operatori matematici
 
 //        System.out.println(11 % 3);
 //
@@ -20,7 +22,7 @@ public class operatori {
 //
 //        System.out.print(17 / x);
 
-        //operatori logici == ; || ; &&
+        //OlderSessions.operatori logici == ; || ; &&
 
         // == comparatie
         // = asignare

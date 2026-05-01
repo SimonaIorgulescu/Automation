@@ -1,3 +1,5 @@
+package OlderSessions;
+
 public class ExercitiiMetode {
 
     static void inmultire(int n) {

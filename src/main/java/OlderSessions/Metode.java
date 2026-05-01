@@ -1,3 +1,5 @@
+package OlderSessions;
+
 public class Metode {
 
     static void salut() {

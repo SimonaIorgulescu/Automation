@@ -1,3 +1,5 @@
+package OlderSessions;
+
 public class ExercitiiSesiunea2 {
 
     public static void main(String[] args) {
